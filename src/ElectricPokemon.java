@@ -18,19 +18,19 @@ public class ElectricPokemon extends Pokemon {
         switch (enemy.getType()) { // getName en getType omdat deze variabelen private zijn in superclass
 
             case "waterPokemon": {
-                System.out.println(enemy.getName() + "loses 15hp.");
+                System.out.println(enemy.getName() + " loses 15hp.");
                 enemy.setHp(enemy.getHp() - 15);
             }
             case "grassPokemon": {
-                System.out.println(enemy.getName() + "loses 10hp.");
+                System.out.println(enemy.getName() + " loses 10hp.");
                 enemy.setHp(enemy.getHp() - 10);
             }
             case "firePokemon": {
-                System.out.println(enemy.getName() + "loses 5hp.");
+                System.out.println(enemy.getName() + " loses 5hp.");
                 enemy.setHp(enemy.getHp() - 5);
             }
             case "electricPokemon": {
-                System.out.println(enemy.getName() + "loses 3hp.");
+                System.out.println(enemy.getName() + " loses 3hp.");
                 enemy.setHp(enemy.getHp() - 3);
             }
         }
@@ -42,20 +42,20 @@ public class ElectricPokemon extends Pokemon {
             switch (enemy.getType()) {
 
                 case "waterPokemon": {
-                    System.out.println(enemy.getName() + "loses 20hp.");
-                    enemy.setHp(enemy.getHp() - 15);
+                    System.out.println(enemy.getName() + " loses 20hp.");
+                    enemy.setHp(enemy.getHp() - 20);
                 }
                 case "grassPokemon": {
-                    System.out.println(enemy.getName() + "loses 15hp.");
-                    enemy.setHp(enemy.getHp() - 10);
+                    System.out.println(enemy.getName() + " loses 15hp.");
+                    enemy.setHp(enemy.getHp() - 15);
                 }
                 case "firePokemon": {
-                    System.out.println(enemy.getName() + "loses 12hp.");
-                    enemy.setHp(enemy.getHp() - 5);
+                    System.out.println(enemy.getName() + " loses 12hp.");
+                    enemy.setHp(enemy.getHp() - 12);
                 }
                 case "electricPokemon": {
-                    System.out.println(enemy.getName() + "loses 5hp.");
-                    enemy.setHp(enemy.getHp() - 3);
+                    System.out.println(enemy.getName() + " loses 5hp.");
+                    enemy.setHp(enemy.getHp() - 5);
                 }
             }
             System.out.println(enemy.getName() + " has " + enemy.getHp() + " health points left.");
@@ -66,20 +66,22 @@ public class ElectricPokemon extends Pokemon {
             switch (enemy.getType()) {
 
                 case "waterPokemon": {
-                    System.out.println(enemy.getName() + "loses 22hp.");
-                    enemy.setHp(enemy.getHp() - 15);
+                    System.out.println(enemy.getName() + " loses 22hp.");
+                    enemy.setHp(enemy.getHp() - 22);
                 }
                 case "grassPokemon": {
-                    System.out.println(enemy.getName() + "loses 15hp.");
-                    enemy.setHp(enemy.getHp() - 10);
+                    System.out.println(enemy.getName() + " loses 15hp.");
+                    enemy.setHp(enemy.getHp() - 15);
                 }
                 case "firePokemon": {
-                    System.out.println(enemy.getName() + "loses 8hp.");
-                    enemy.setHp(enemy.getHp() - 5);
+                    System.out.println(enemy.getName() + " loses 8hp.");
+                    enemy.setHp(enemy.getHp() - 8);
                 }
-                case "electricPokemon": {
-                    System.out.println(enemy.getName() + "loses 5hp.");
-                    enemy.setHp(enemy.getHp() - 3);
+                case "electricPokemon": { // Ik ben ervan uitgegaan dat beide Electric Pokemons extra hp's krijgen, zowel de aanvaller als de verdediger
+                    System.out.println(enemy.getName() + " gains 10hp.");
+                    System.out.println(name.getName() + " gains 10hp");
+                    enemy.setHp(enemy.getHp() + 10);
+                    name.setHp(name.getHp() + 10);
                 }
             }
             System.out.println(enemy.getName() + " has " + enemy.getHp() + " health points left.");
@@ -90,20 +92,20 @@ public class ElectricPokemon extends Pokemon {
             switch (enemy.getType()) {
 
                 case "waterPokemon": {
-                    System.out.println(enemy.getName() + "loses 12hp.");
-                    enemy.setHp(enemy.getHp() - 15);
+                    System.out.println(enemy.getName() + " loses 12hp.");
+                    enemy.setHp(enemy.getHp() - 12);
                 }
                 case "grassPokemon": {
-                    System.out.println(enemy.getName() + "loses 8hp.");
-                    enemy.setHp(enemy.getHp() - 10);
+                    System.out.println(enemy.getName() + " loses 8hp.");
+                    enemy.setHp(enemy.getHp() - 8);
                 }
                 case "firePokemon": {
-                    System.out.println(enemy.getName() + "loses 5hp.");
+                    System.out.println(enemy.getName() + " loses 5hp.");
                     enemy.setHp(enemy.getHp() - 5);
                 }
                 case "electricPokemon": {
-                    System.out.println(enemy.getName() + "loses 2hp.");
-                    enemy.setHp(enemy.getHp() - 3);
+                    System.out.println(enemy.getName() + " loses 2hp.");
+                    enemy.setHp(enemy.getHp() - 2);
                 }
             }
             System.out.println(enemy.getName() + " has " + enemy.getHp() + " health points left.");

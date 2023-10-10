@@ -25,3 +25,4 @@ public interface PokemonGym {
 
     void attackOrChange(Pokemon pokemon, Pokemon gymPokemon, PokemonTrainer trainer, PokemonGymOwner gym);
 }
+
