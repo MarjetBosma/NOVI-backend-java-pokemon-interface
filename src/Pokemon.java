@@ -4,14 +4,16 @@ public abstract class Pokemon { // Abstract, omdat je dan geen pokemon (super cl
     private final int level;
     private int hp;
     private final String food;
+    private final Food preferredFood; // Variabele preferredFood, type Food van de nieuwe klasse Food, voor de bonusopdracht. Het is me helaas niet gelukt dit verder te implementeren.
     private final String sound;
 
-    public Pokemon(String name, String type, int level, int hp, String food, String sound) {
+    public Pokemon(String name, String type, int level, int hp, String food, Food preferredFood, String sound) {
         this.name = name;
         this.type = type;
         this.level = level;
         this.hp = hp;
         this.food = food;
+        this.preferredFood = preferredFood;
         this.sound = sound;
     }
 
@@ -35,12 +37,16 @@ public abstract class Pokemon { // Abstract, omdat je dan geen pokemon (super cl
         this.hp = hp;
     }
 
+    public String getSound() {
+        return sound;
+    }
+
     public String getFood() {
         return food;
     }
 
-    public String getSound() {
-        return sound;
+    public Food getPreferredFood() {
+        return preferredFood;
     }
 }
 
