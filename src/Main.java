@@ -18,11 +18,19 @@ public class Main {
     private static final ElectricPokemon raichu = new ElectricPokemon("Raichu", 80, 160, "Pokebrocks", "Raaaaiiiiicccchhhhuuuuuuu!!!!");
     private static final WaterPokemon gyarados = new WaterPokemon("Gyarados", 90, 180, "Pokeflakes", "Gyaaaaaaaaarrrraaaadoooos");
 
-    private static List<Pokemon> pokemons = Arrays.asList(charizard, blastoise, venusaur, ditto, raichu, gyarados);
+    private static final List<Pokemon> pokemons = Arrays.asList(charizard, blastoise, venusaur, ditto, raichu, gyarados);
 
 
     // Los in de main methode alle foutmeldigen op door (abstracte) klassen met variabelen en methoden te maken (en soms een import).
     // In de main methode en de Main klasse hoef je niks te veranderen.
+    // MB: Ik heb onderataande variabelen toegevoegd voor de bonusopdracht over food.
+
+    private static final Food firenougats = new Food("firenougats", 50);
+    private static final Food pokeflakes = new Food("Pokeflakes", 50);
+    private static final Food pokeleafs = new Food("Pokeleafs", 50);
+    private static final Food everything = new Food("Everything", 50);
+    private static final Food pokebrocks = new Food("Pokebrocks", 50);
+
     public static void main(String[] args) {
         Scanner speler_A = new Scanner(System.in);
         PokemonGymImpl pokemonGym = new PokemonGymImpl(pokemons);
@@ -37,8 +45,13 @@ public class Main {
         if (speler_A.nextLine().equals("yes")) {
             pokemonGym.enteredTheGym(player1);
         }
+        Food foodToThrow = new Food("firenougats", 50); // Example food to throw
 
+        for (Pokemon pokemon : pokemons) {
+            pokemon.throwFood(foodToThrow);
+        }
+    }
     }
 
 
-}
+
